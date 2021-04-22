@@ -6,16 +6,27 @@
   margin: 0;
 }
 
+.clr{
+  clear: both;
+}
+
 .logo img{
   height: 75px;
   width: 75px;
   margin-top: 10px;
+  margin-left: 5px;
 }
 
 body {
   font-family: 'Lato', sans-serif;
   color: #333;
   line-height: 1.6;
+  height: 100%;
+}
+
+html{
+  height: 100%;
+  width: 100%;
 }
 
 ul {
@@ -24,7 +35,7 @@ ul {
 
 a{
   text-decoration: none;
-  color: #333;
+  color:white;
 }
 
 h1, h2 {
@@ -37,9 +48,7 @@ p{
   margin: 10px 0;
 }
 
-img {
-  width: 100%;
-}
+
 
 /*Navbar*/
 .navbar {
@@ -56,6 +65,7 @@ img {
   color: black;
   padding: 6px;
   margin: 0 5px;
+  font-size: 14px;
 }
 
 .navbar a:hover{
@@ -75,32 +85,34 @@ img {
   background-size:cover;
   color: white;
   position: relative;
+  padding-left: 10px;
+  padding-top: 10px;
   text-align: center;
 }
 
 .showcase h1{
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .showcase p{
-  padding: 20px;
-  font-size: 25px;
+  padding: 10px;
+  font-size: 20px;
   color: white;
 }
 
 .showcase .grid{
   overflow: visible;
   grid-template-columns: 55% 45%;
-  gap: 30px;
+  gap: 20px;
 }
 
 .showcase-form{
   position: relative;
   top: 60px;
   height: 400px;
-  width: 400px;
-  padding: 40px;
-  z-index: 100;
+  width: 300px;
+  padding: 10px;
+  z-index: 80;
 }
 
 .showcase-form .form-control{
@@ -120,28 +132,14 @@ img {
   outline: none;
 }
 
-.showcase::before,
-.showcase::after {
-  content: '';
-  position: absolute;
-  height: 100px;
-  bottom: -70px;
-  right: 0;
-  left: 0;
-  background: white;
-  transform: skewY(-3deg);
-  -webkit-transform: skewY(-3deg);
-  -moz-transform: skewY(-3deg);
-  -ms-transform: skewY(-3deg);
-}
 
 
 /*Utilities*/
 .container{
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 0;
   overflow: auto;
-  padding: 0 40px;
+  padding: 0 10px;
 }
 
 .card{
@@ -149,13 +147,13 @@ img {
   color:#333;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
 }
 
 .btn{
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px;
   cursor: pointer;
   background: black;
   color: white;
@@ -181,10 +179,165 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
+.recept{
+  text-align: center;
+  margin: 20px;
+}
+
+.recept img{
+  height: 500px;
+  width: 100%;
+  margin: 15px;
+}
+
+.recept p{
+  padding: 10px;
+}
+
+.gif{
+  text-align: center;
+  margin: 15px;
+}
+
+.gif img{
+  text-align: center;
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+}
+
+hr{
+  height: 2px;
+  border-width: 2px;
+  color: black;
+}
+
+.slide1 p, button{
+  padding-left: 60px;
+}
+
+.slide1{
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+.slide1 img{
+  height: 415px;
+  width: 700px;
+}
+
+.slide1 .p{
+  text-align: center;
+}
+
+.slide1.p button{
+  text-align: center;
+  padding: 10px;
+}
+
+
+.slide2 p, button{
+  padding-left: 60px;
+}
+
+.slide2{
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+.slide2 img{
+  height: 415px;
+  width: 700px;
+}
+
+.more{
+  text-align: center;
+}
+
+.online{
+  text-align: center;
+}
+
+.online p{
+  color: blue;
+}
+
+
+.slide2 .p{
+  text-align: center;
+}
+
+.slide2.p button{
+  text-align: center;
+  padding: 10px;
+}
+
+.footer {
+  background-color: coral;
+  color: white;
+  padding: 50px;
+  margin: 0;
+  text-align: center;
+}
+
+.popup{
+  position: relative;
+  display: inline-block;
+  cursor:pointer
+}
+
+
+.popup .btn{
+  text-align: center;
+}
+
+.popup .popuptext{
+  visibility: hidden;
+  width: 160px;
+  background-color: coral;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-right: -80px;
+}
+
+.popup .popuptext::after{
+  content: "";
+  position: absolute;
+  top:100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color: #555 transparent  transparent  transparent;
+}
+
+.popup .show{
+  visibility: visible;
+  -webkit-animation: fadeIn ls;
+  animation: fadeIn ls;
+}
+
+@-webkit-keyframes fadeIn{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
